@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page de message</title>
+</head>
+<body>
+<h1>oui</h1>
+<form action="#" th:action="@{/user}" method="post">
+    <label for="name">Votre nom :</label>
+    <input type="text" id="name" name="name" required>
+    <label for="age">Votre âge :</label>
+    <input type="number" id="age" name="age" required><br>
+    <input type="submit" value="Envoyer">
+    <p th:text="${welcomeMessage}"></p>
+
+    <span th:if="${#fields.hasErrors('age')}">
+    <span th:errors="*{age}"></span>
+    <br>
+</span>
+
+</form>
+</body>
+</html>
