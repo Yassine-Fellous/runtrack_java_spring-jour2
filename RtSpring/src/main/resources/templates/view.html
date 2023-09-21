@@ -1,4 +1,4 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Page de message</title>
@@ -12,9 +12,7 @@
     <input type="number" id="age" name="age" required><br>
     <input type="submit" value="Envoyer">
     <p th:text="${welcomeMessage}"></p>
-
-    <span th:if="${#fields.hasErrors('age')}">
-    <span th:errors="*{age}"></span>
+    <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
     <br>
 </span>
 
